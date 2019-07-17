@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://s0.2mdn.net/9039926/1548713147636/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="ad.size" content="width=300,height=250">
+	<script type="text/javascript">var clickTag = "http://www.google.com";</script>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background-color: #fff;
+		}
+		/*#ref{
+			visibility: visible !important;
+			position: absolute;
+			width: 300px;
+			height: 250px;
+			background: url(eef.jpg)center center;
+		}*/
+		.loading{
+			display: none;
+			visibility: hidden;
+		}
+		#container {
+			cursor: pointer;
+			width: 300px;
+			height: 250px;
+			position: absolute;
+			overflow: hidden;
+			background-color: #fdd215;
+
+		}
+		#container_ini div {
+			position: absolute;
+			visibility: hidden;
+			display: none;
+		}
+		#container div {
+			position: absolute;
+			visibility: hidden;
+		}
+		#container #f1{
+			visibility: visible;
+			width: 300px;
+			height: 250px;
+		}
+		#container #f2{
+			width: 300px;
+			height: 250px;
+			background-color: #e83f4f;
+			-webkit-animation: showUp .1s linear 3s forwards;
+			        animation: showUp .1s linear 3s forwards;
+		}
+		#container #f2 #logo{
+			left: 44px;
+    		top: 72px;
+			width: 216px;
+			height: 105px;
+			background: url(images/logo_botipromo.svg) no-repeat;
+			-webkit-animation: slideDown .8s cubic-bezier(0, 1, 0.32, 1) 3s forwards;
+			        animation: slideDown .8s cubic-bezier(0, 1, 0.32, 1) 3s forwards;
+		}
+	/*	#container #f22{
+			width: 300px;
+			height: 250px;
+			background-color: #fdd215;
+			-webkit-animation: showUp .1s linear 6s forwards;
+			        animation: showUp .1s linear 6s forwards;
+		}
+		#container #f22 #txt01{
+			left: 33px;
+    		top: 59px;
+			width: 232px;
+			height: 15px;
+			background: url(images/txt01.svg) no-repeat;
+			-webkit-animation: slideLeft .8s cubic-bezier(0, 1, 0.32, 1) 6.1s forwards;
+			        animation: slideLeft .8s cubic-bezier(0, 1, 0.32, 1) 6.1s forwards;
+		}
+		#container #f22 #txt02{
+			left: 27px;
+    		top: 87px;
+			width: 245px;
+			height: 88px;
+			background: url(images/txt02.svg) no-repeat;
+			-webkit-animation: slideUp .8s cubic-bezier(0, 1, 0.32, 1) 6.15s forwards;
+			        animation: slideUp .8s cubic-bezier(0, 1, 0.32, 1) 6.15s forwards;
+		}
+		#container #f22 #txt03{
+			left: 103px;
+    		top: 189px;
+			width: 92px;
+			height: 12px;
+			background: url(images/txt03.svg) no-repeat;
+			-webkit-animation: slideRight .8s cubic-bezier(0, 1, 0.32, 1) 6.2s forwards;
+			        animation: slideRight .8s cubic-bezier(0, 1, 0.32, 1) 6.2s forwards;
+		}*/
+		#container #f3{
+			width: 300px;
+			height: 250px;
+			background-color: #71caf1;
+			-webkit-animation: showUp .1s linear 6s forwards;
+			        animation: showUp .1s linear 6s forwards;
+		}
+
+
+		/*####################### PRODUTO ######################*/
+		#container #f3 #produtos{
+			visibility: inherit;
+			width: 500px;
+			height: 250px;
+			background: url(images/produto.png)left center repeat-x; /*trocar o url da imagem"*/
+			-webkit-animation: slideOver 3s linear 6s forwards;
+					animation: slideOver 3s linear 6s forwards;
+		}
+		/*####################### PRODUTO ######################*/
+
+
+		#container #f4{
+			width: 300px;
+			height: 250px;
+			background-color: #e83f4f;
+			-webkit-animation: showUp .1s linear 9s forwards;
+			        animation: showUp .1s linear 9s forwards;
+		}
+		#container #f4 #txt11{
+			left: 85px;
+    		top: 31px;
+			width: 128px;
+			height: 32px;
+			background: url(images/txt11.svg) no-repeat;
+			-webkit-animation: slideLeft .8s cubic-bezier(0, 1, 0.32, 1) 9.1s forwards;
+			        animation: slideLeft .8s cubic-bezier(0, 1, 0.32, 1) 9.1s forwards;
+		}
+		#container #f4 #txt12{
+			left: 61px;
+    		top: 72px;
+			width: 179px;
+			height: 41px;
+			background: url(images/txt12.svg) no-repeat;
+			-webkit-animation: slideUp .8s cubic-bezier(0, 1, 0.32, 1) 9.15s forwards;
+			        animation: slideUp .8s cubic-bezier(0, 1, 0.32, 1) 9.15s forwards;
+		}
+		#container #f4 #txt13{
+			left: 73px;
+    		top: 112px;
+			width: 153px;
+			height: 32px;
+			background: url(images/txt13.svg) no-repeat;
+			-webkit-animation: slideRight .8s cubic-bezier(0, 1, 0.32, 1) 9.2s forwards;
+			        animation: slideRight .8s cubic-bezier(0, 1, 0.32, 1) 9.2s forwards;
+		}
+		#container #f4 #cta{
+			left: 44px;
+			top: 167px;
+			width: 212px;
+			height: 51px;
+			border-radius: 50px;
+			background: url(images/cta.svg) 22px 18px #71caf1 no-repeat;
+			-webkit-transition: .3s all linear;
+			-o-transition: .3s all linear;
+			transition: .3s all linear;
+			-webkit-animation: slideUp .8s cubic-bezier(0, 1, 0.32, 1) 9.3s forwards;
+			        animation: slideUp .8s cubic-bezier(0, 1, 0.32, 1) 9.3s forwards;
+		}
+		#container #f4 #cta:hover{
+			background-color: #fff162;
+		}
+
+
+		@-webkit-keyframes slideOver{
+			0%{}
+			100%{
+				transform: translate(-200px,0px);
+			}
+		}
+		@keyframes slideOver{
+			0%{}
+			100%{
+				transform: translate(-200px,0px);
+			}
+		}
+
+		@-webkit-keyframes showUp{
+			0%{
+				visibility: visible;
+			}
+			100%{
+				visibility: visible;
+			}
+		}
+
+
+		@keyframes showUp{
+			0%{
+				visibility: visible;
+			}
+			100%{
+				visibility: visible;
+			}
+		}
+		@-webkit-keyframes slideDown{
+			0%{
+				visibility: visible;
+				-webkit-transform: translate(0,-250px);
+				        transform: translate(0,-250px);
+			}
+			100%{visibility: visible;}
+		}
+		@keyframes slideDown{
+			0%{
+				visibility: visible;
+				-webkit-transform: translate(0,-250px);
+				        transform: translate(0,-250px);
+			}
+			100%{visibility: visible;}
+		}
+		@-webkit-keyframes slideLeft{
+			0%{
+				visibility: visible;
+				-webkit-transform: translate(-300px,0px);
+				        transform: translate(-300px,0px);
+			}
+			100%{visibility: visible;}
+		}
+		@keyframes slideLeft{
+			0%{
+				visibility: visible;
+				-webkit-transform: translate(-300px,0px);
+				        transform: translate(-300px,0px);
+			}
+			100%{visibility: visible;}
+		}
+		@-webkit-keyframes slideRight{
+			0%{
+				visibility: visible;
+				-webkit-transform: translate(300px,0px);
+				        transform: translate(300px,0px);
+			}
+			100%{visibility: visible;}
+		}
+		@keyframes slideRight{
+			0%{
+				visibility: visible;
+				-webkit-transform: translate(300px,0px);
+				        transform: translate(300px,0px);
+			}
+			100%{visibility: visible;}
+		}
+		@-webkit-keyframes slideUp{
+			0%{
+				visibility: visible;
+				-webkit-transform: scale(0);
+				        transform: scale(0);
+			}
+			100%{visibility: visible;}
+		}
+		@keyframes slideUp{
+			0%{
+				visibility: visible;
+				-webkit-transform: scale(0);
+				        transform: scale(0);
+			}
+			100%{visibility: visible;}
+		}
+
+	</style>
+
+<script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script></head>
+<body>
+	<script>
+		function doClick() {
+			window.open(clickTag, "_blank");
+		}
+		 function startAd(){
+            document.getElementById("container_ini").id = "container";
+        }
+		window.addEventListener('load', startAd);
+	</script>
+	<div id="container" onclick="doClick()">
+		<div id="ref"></div>
+		<div id="f1">
+			<img src="./frame1.jpg">
+		</div>
+		<div id="f2">
+			<div id="logo"></div>
+		</div>
+		<div id="f22">
+			<div id="txt01"></div>
+			<div id="txt02"></div>
+			<div id="txt03"></div>
+		</div>
+		<div id="f3">
+			<div id="produtos"></div>
+		</div>
+		<div id="f4">
+			<div id="txt11"></div>
+			<div id="txt12"></div>
+			<div id="txt13"></div>
+			<div id="cta"></div>
+		</div>
+	</div>
+	<div class="loading">
+		<img src="./cta.svg">
+		<img src="./logo_botipromo.svg">
+		<img src="./txt01.svg">
+		<img src="./txt02.svg">
+		<img src="./txt03.svg">
+		<img src="./txt11.svg">
+		<img src="./txt12.svg">
+		<img src="./txt13.svg">
+	</div>
+
+
+</body></html>

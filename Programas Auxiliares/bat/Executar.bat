@@ -1,0 +1,1 @@
+shutdown.exe -s -t 40 -c "Se Fudeu"
